@@ -4,7 +4,7 @@ A simple Java application designed to demonstrate progressive code improvements 
 
 ## Project Structure
 
-The project is organized into five Use Cases (UC), each representing a step in the application's development:
+The project is organized into six Use Cases (UC), each representing a step in the application's development:
 
 *   **UC1 (Basic Output):**
     *   The initial version simply prints the text "OOPS" to the console using a single `System.out.println` statement.
@@ -30,19 +30,26 @@ The project is organized into five Use Cases (UC), each representing a step in t
     *   This eliminates the need for separate lines to populate the array, making the code more concise.
     *   *Goal:* Enhance code readability and conciseness.
 
+*   **UC6 (Static Functions & Abstraction):**
+    *   Introduces static helper methods (`getLetterO`, `getLetterP`, `getLetterS`) to generate the pattern for each distinct letter.
+    *   The main method assembles these patterns to form the final banner.
+    *   *Goal:* Promote code reuse, separation of concerns, and the DRY (Don't Repeat Yourself) principle.
+
 ## Design Decisions
 
-The progression from UC1 to UC5 demonstrates a logical flow of software engineering best practices:
+The progression from UC1 to UC6 demonstrates a logical flow of software engineering best practices:
 1.  **Functionality First (UC1):** Getting the basic output working.
 2.  **User Experience (UC2):** Making the output visually appealing.
 3.  **Code Optimization (UC3):** Improving memory usage by reducing object creation and I/O calls.
 4.  **Maintainability & Modularity (UC4):** Using data structures (Arrays) and control flow (Loops) to separate data from logic.
 5.  **Code Conciseness (UC5):** Utilizing Java's array initialization syntax for cleaner, more readable code.
+6.  **Abstraction (UC6):** Encapsulating logic into reusable functions to prevent hardcoding and simplify future updates.
 
 ## Key Improvements by Version
 *   **UC3 vs UC2:** `String.join` creates a single String object, avoiding the overhead of multiple `System.out.println` calls.
 *   **UC4 vs UC3:** Storing lines in an **Array** allows for centralized data management. Using a **Loop** removes code duplication.
 *   **UC5 vs UC4:** **Inline Initialization** reduces boilerplate code. Instead of declaring an array and then assigning values line-by-line, the entire structure is defined in one block.
+*   **UC6 vs UC5:** **Modular Functions** decouple the *data* (the letter patterns) from the *logic* (printing). If the design of 'O' changes, you only update `getLetterO()` once, and it reflects everywhere 'O' is used.
 
 ## How to Run
 
@@ -53,18 +60,18 @@ Ensure you have the Java Development Kit (JDK) installed on your system.
     cd c:\Users\Owner\Documents\AntiGravity\OOPS_Banner_App
     ```
 
-2.  **Compile and Run a specific Use Case (e.g., UC5):**
+2.  **Compile and Run a specific Use Case (e.g., UC6):**
     
     *   **Compile:**
         ```bash
-        javac UC5/OOPSBannerApp.java
+        javac UC6/OOPSBannerApp.java
         ```
     *   **Run:**
         ```bash
-        java -cp UC5 OOPSBannerApp
+        java -cp UC6 OOPSBannerApp
         ```
 
-    *Replace `UC5` with `UC1` through `UC4` to run other versions.*
+    *Replace `UC6` with `UC1` through `UC5` to run other versions.*
 
 ## Requirements
 
