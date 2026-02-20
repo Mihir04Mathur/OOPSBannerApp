@@ -6,7 +6,7 @@
  * with a newline delimiter, which is more memory efficient than repeated
  * concatenation.
  * 
- * @author YourName
+ * @author MIHIR MATHUR
  * @version 1.0
  */
 public class OOPSBannerApp {

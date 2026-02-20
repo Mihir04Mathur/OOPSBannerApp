@@ -2,7 +2,7 @@
  * OOPS Banner App - Prints a banner to the console.
  * Use Case 1: Printing the literal text "OOPS" to the console.
  * 
- * @author YourName
+ * @author MIHIR MATHUR
  * @version 1.0
  */
 public class OOPSBannerApp {
