@@ -68,18 +68,18 @@ Ensure you have the Java Development Kit (JDK) installed on your system.
     cd c:\Users\Owner\Documents\AntiGravity\OOPS_Banner_App
     ```
 
-2.  **Compile and Run a specific Use Case (e.g., UC6):**
-    
+2.  **Compile and Run the latest code on this dev branch:
+
     *   **Compile:**
         ```bash
-        javac UC6/OOPSBannerApp.java
+        javac OOPSBannerApp.java
         ```
     *   **Run:**
         ```bash
-        java -cp UC6 OOPSBannerApp
+        java OOPSBannerApp
         ```
 
-    *Replace `UC6` with `UC1` through `UC7` to run other versions.*
+    *Switch to other branches (uc-1 to uc-7) to see earlier versions of the code.*
 
 ## Requirements
 
