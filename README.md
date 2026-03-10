@@ -41,6 +41,11 @@ The project is organized into seven Use Cases (UC), each representing a step in 
     *   Uses `StringBuilder` for efficient string concatenation when assembling the banner.
     *   *Goal:* Improve modularity and scalability by managing patterns using Object-Oriented Programming (OOP) principles.
 
+*   **UC8 (Map Data Structure & Render Function):**
+    *   Replaces the manual management of character patterns with a centralized `HashMap` to store character-to-pattern mappings.
+    *   Introduces a dynamic `renderBanner` function that uses nested loops to assemble and render any given word using the patterns in the map.
+    *   *Goal:* Improve retrieval efficiency, enhance code maintainability, and allow the dynamic rendering of arbitrary words.
+
 ## Design Decisions
 
 The progression from UC1 to UC7 demonstrates a logical flow of software engineering best practices:
@@ -51,6 +56,7 @@ The progression from UC1 to UC7 demonstrates a logical flow of software engineer
 5.  **Code Conciseness (UC5):** Utilizing Java's array initialization syntax for cleaner, more readable code.
 6.  **Abstraction (UC6):** Encapsulating logic into reusable functions to prevent hardcoding and simplify future updates.
 7.  **Object-Oriented Design (UC7):** Encapsulating character data and its pattern into a dedicated class.
+8.  **Data Structures & Dynamic Rendering (UC8):** Utilizing a `HashMap` for O(1) pattern lookup and introducing a reusable rendering function to dynamically assemble arbitrary words.
 
 ## Key Improvements by Version
 *   **UC3 vs UC2:** `String.join` creates a single String object, avoiding the overhead of multiple `System.out.println` calls.
@@ -58,6 +64,7 @@ The progression from UC1 to UC7 demonstrates a logical flow of software engineer
 *   **UC5 vs UC4:** **Inline Initialization** reduces boilerplate code. Instead of declaring an array and then assigning values line-by-line, the entire structure is defined in one block.
 *   **UC6 vs UC5:** **Modular Functions** decouple the *data* (the letter patterns) from the *logic* (printing). If the design of 'O' changes, you only update `getLetterO()` once, and it reflects everywhere 'O' is used.
 *   **UC7 vs UC6:** **OOP Encapsulation** replaces fragmented helper methods with a dedicated class (`CharacterPattern`). This centralizes character management and uses `StringBuilder` for more efficient string construction.
+*   **UC8 vs UC7:** **Data Structures and Dynamic Rendering** replaces manual object handling and hardcoded string assembly. By storing patterns in a `HashMap`, lookup is centralized and efficient. The `renderBanner` function replaces specific "OOPS" building logic with dynamic loops, greatly increasing application reusability.
 
 ## How to Run
 
